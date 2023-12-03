@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>tiktok2recipe</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif
+            }
+            #container {
+                max-width: 800px;
+                margin: 60px auto;
+            }
+            #url-input-container {
+                display: flex;
+                justify-content: space-between;
+
+            }
+            #url-input {
+                font-size: large;
+                flex: 1;
+                padding: 16px;
+                border: 1px solid black;
+                border-radius: 16px;
+            }
+            #button {
+                font-size: large;
+                padding: 16px;
+                border: 1px solid black;
+                border-radius: 16px;
+                margin-left: 8px;
+            }
+            #button:hover {
+                background-color: #d7d7d7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>tiktok2recipe</h1>
+            <form action="/" method="POST" id="url-input-container">
+                <input type="text" id="url-input" placeholder="paste URL here." name="url">
+                <input type="submit" id="button" value="get recipe"> 
+            </form>
+        </div>
+        {{ url }}
+    </body>
+</html>
