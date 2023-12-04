@@ -11,7 +11,7 @@ load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 video_info = {}
-dish_path = 'beef-broccoli'
+dish_path = 'test'
 video_path = f'{dish_path}/video.mp4'
 caption_path = f"{dish_path}/caption.txt"
 output_path = f"{dish_path}/output.md"
