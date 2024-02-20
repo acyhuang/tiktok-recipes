@@ -7,10 +7,11 @@ app = Flask(__name__)
 def home():
     return render_template("index.html", recipe="")
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/', methods=['POST'])
 def run():
-    result = subprocess.run(["python", "app/process.py", request.form['url']], capture_output=True, text=True)
+    result = subprocess.run(["python", "process.py", request.form['url']], capture_output=True, text=True)
     parsed_result = result.stdout.strip()
+    print(parsed_result)
     return render_template('index.html', recipe=parsed_result)
 
 if __name__ == "__main__":
